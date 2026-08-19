@@ -1,0 +1,6 @@
+{
+  "name": "EFFLUENT DASHBOARD",
+  "description": "Real-time Industrial Effluent Pollution Monitoring and Automatic Discharge Safety Control System",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
