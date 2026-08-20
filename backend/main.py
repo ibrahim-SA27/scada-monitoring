@@ -124,7 +124,7 @@ master_scada_state = {
     "lastUpdate": int(time.time() * 1000),
     "lastUpdateFormatted": datetime.now().strftime("%I:%M:%S %p"),
     "lastSource": "ESP32",
-    "simulationActive": True,
+    "simulationActive": False,
     "gmailAlertStatus": "READY",
     "lastGmailSentTime": None,
     "stats": {
@@ -213,12 +213,8 @@ def send_smtp_alert_email(score: int, status_level: str, sensor_data: dict, time
         os.environ.get("GMAIL_APP_PASSWORD", "").strip()
         or os.environ.get("GMAIL_PASS", "").strip()
     )
+    receiver = "CHIEF_GUEST_EMAIL@gmail.com" 
 
-    receiver = (
-        os.environ.get("GMAIL_RECEIVER", "").strip()
-        or os.environ.get("ALERT_EMAIL_RECIPIENT", "").strip()
-        or sender
-    )
 
     if app_password:
         app_password = "".join(app_password.split())

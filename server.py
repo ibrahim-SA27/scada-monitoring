@@ -525,7 +525,7 @@ def get_alerts():
 def test_email():
     """Trigger manual test email."""
     test_values = {
-        "ph": 3.8,
+        "ph": 8.8,
         "tds": 1680.0,
         "turbidity": 125.0,
         "temperature": 44.0,
